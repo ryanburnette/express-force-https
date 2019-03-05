@@ -1,0 +1,8 @@
+{
+  "name": "@ryanburnette/express-force-https",
+  "version": "1.0.0",
+  "description": "Force HTTPS in Express for staging and production environments.",
+  "main": "index.js",
+  "author": "Ryan Burnette <ryan.burnette@gmail.com>",
+  "license": "ISC"
+}
