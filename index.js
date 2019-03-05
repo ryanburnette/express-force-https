@@ -1,7 +1,12 @@
-// jshint node: true, esversion: 6, asi: true
+// jshint node: true
 'use strict';
 
-module.exports = (req,res,next) => {
-  if (req.secure || ['staging','production'].includes(process.env.NODE_ENV)) next()
-  else res.redirect('https://'+req.headers.host+req.url);
-}
+module.exports = function (req,res,next) {
+  if (!['staging','production'].includes(process.env.NODE_ENV)) {
+    return next();
+  }
+  if (req.secure) {
+    return next();
+  }
+  res.redirect('https://'+req.headers.host+req.url);
+};
