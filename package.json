@@ -1,8 +1,12 @@
 {
   "name": "@ryanburnette/express-force-https",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Force HTTPS in Express for staging and production environments.",
   "main": "index.js",
   "author": "Ryan Burnette <ryan.burnette@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ryanburnette/express-force-https.git"
+  }
 }
