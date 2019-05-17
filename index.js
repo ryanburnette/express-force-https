@@ -1,7 +1,6 @@
-// jshint node: true
 'use strict';
 
-module.exports = function (req,res,next) {
+module.exports = function (req, res, next) {
   if (!['staging','production'].includes(process.env.NODE_ENV)) {
     return next();
   }
