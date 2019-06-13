@@ -1,9 +1,9 @@
 'use strict';
 
-module.exports = function (req, res, next) {
-  var env = process.env.NODE_ENV;
-  if (env !== 'production') { return next(); }
-  var proto = req.headers['x-forwarded-proto'] || req.protocol;
-  if (proto !== 'https') { return res.redirect('https://'+req.headers.host+req.url); }
-  next();
+module.exports = function(req, res, next) {
+  if ((req.headers['x-forwarded-proto'] || req.protocol) !== 'https') {
+    res.redirect('https://' + req.headers.host + req.url);
+  } else {
+    next();
+  }
 };
