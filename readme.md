@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/%40ryanburnette%2Fexpress-force-https.svg)](https://badge.fury.io/js/%40ryanburnette%2Fexpress-force-https)
 
-Express middleware for forcing all connections to HTTPS using a redirect.
+Express middleware for forcing all connections to HTTPS using a header redirect.
 
 Works behind a proxy such as Heroku.
 
