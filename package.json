@@ -1,6 +1,6 @@
 {
   "name": "@ryanburnette/express-force-https",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "Express middleware for forcing all connections to HTTPS using a header redirect.",
   "main": "index.js",
   "author": "Ryan Burnette <ryan.burnette@gmail.com>",

@@ -1,9 +1,12 @@
 'use strict';
 
 module.exports = function(req, res, next) {
-  if ((req.headers['x-forwarded-proto'] || req.protocol) !== 'https') {
-    res.redirect('https://' + req.headers.host + req.url);
-  } else {
+  var proto = req.headers['x-forwarded-proto'] || req.protocol;
+  if (proto === 'https') {
     next();
+    return;
   }
+  res.statusCode = 301;
+  res.setHeader('Location', 'https://' + req.headers.host + req.url);
+  res.end();
 };
