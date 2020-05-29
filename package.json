@@ -1,9 +1,9 @@
 {
   "name": "@ryanburnette/express-force-https",
-  "version": "1.7.1",
-  "description": "Express or Node.js HTTP middleware for forcing all connections to HTTPS using a header redirect.",
+  "version": "4.0.0",
+  "description": "Express.js middleware to force HTTPS.",
   "main": "index.js",
-  "author": "Ryan Burnette <ryan.burnette@gmail.com>",
+  "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
   "repository": {
     "type": "git",
